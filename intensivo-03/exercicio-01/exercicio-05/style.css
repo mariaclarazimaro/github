@@ -1,0 +1,132 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 50px auto;
+
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.carrossel {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px #0003;
+}
+
+.slides {
+    display: flex;
+
+    width: 400%;
+
+    animation: deslizar 12s infinite;
+}
+
+.slide {
+    width: 25%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+/* Animação do carrossel */
+
+@keyframes deslizar {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    45% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    70% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-75%);
+    }
+
+    95% {
+        transform: translateX(-75%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+.indicadores {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.indicadores span {
+    width: 10px;
+    height: 10px;
+
+    background-color: #777;
+
+    border-radius: 50%;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+}
+```

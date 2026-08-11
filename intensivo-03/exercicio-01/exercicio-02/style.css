@@ -1,0 +1,82 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #222;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 5%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #74b9ff;
+}
+
+#menu {
+    display: none;
+}
+
+.hamburguer {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+main {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Celular */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #menu:checked ~ nav {
+        display: flex;
+    }
+
+}
+```

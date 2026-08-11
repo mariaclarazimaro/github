@@ -1,0 +1,74 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef2ff;
+}
+
+.pagina {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5%;
+}
+
+.conteudo {
+    width: 90%;
+    max-width: 50rem;
+
+    background-color: white;
+
+    padding: 2rem;
+
+    border-radius: 1rem;
+
+    box-shadow: 0 0.5rem 1.5rem #0002;
+}
+
+h1 {
+    font-size: 3vw;
+    margin-bottom: 1em;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.caixa {
+    width: 100%;
+
+    margin-top: 2rem;
+
+    padding: 1.5rem;
+
+    background-color: #6366f1;
+    color: white;
+
+    border-radius: 1em;
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .conteudo {
+        padding: 1.2rem;
+    }
+
+}
+```
