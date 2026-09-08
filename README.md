@@ -272,7 +272,7 @@ Estudante de Desenvolvimento de Sistemas e desenvolvedora em formação, com foc
 ### 🔗 GitHub
 
 **Link do repositório:**
-`COLOQUE-SEU-LINK-DO-GITHUB-AQUI`
+https://github.com/mariaclarazimaro/github
 
 ---
 
