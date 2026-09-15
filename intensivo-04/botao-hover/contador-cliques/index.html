@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Contador de Cliques</title>
+<style>
+  body { font-family: sans-serif; text-align: center; margin-top: 100px; }
+  #contador { font-size: 48px; font-weight: bold; color: #3b82f6; margin: 20px 0; }
+  button { padding: 12px 24px; font-size: 16px; cursor: pointer; border-radius: 8px; border: none; background: #10b981; color: white; margin: 0 6px; }
+</style>
+</head>
+<body>
+  <h1 id="contador">0</h1>
+  <button id="incrementar">Clique aqui</button>
+  <button id="resetar" style="background:#ef4444;">Resetar</button>
+
+  <script>
+    let contagem = 0;
+    const display = document.getElementById('contador');
+
+    document.getElementById('incrementar').addEventListener('click', () => {
+      contagem++;
+      display.textContent = contagem;
+    });
+
+    document.getElementById('resetar').addEventListener('click', () => {
+      contagem = 0;
+      display.textContent = contagem;
+    });
+  </script>
+</body>
+</html>
