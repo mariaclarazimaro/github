@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal MUI</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@mui/material@5.15.20/umd/material-ui.development.js"></script>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script>
+        const { Button, Modal, Box, Typography } = MaterialUI;
+
+        function App() {
+            const [open, setOpen] = React.useState(false);
+
+            return React.createElement(
+                "div",
+                { style: { padding: "50px" } },
+
+                React.createElement(
+                    Button,
+                    {
+                        variant: "contained",
+                        onClick: () => setOpen(true)
+                    },
+                    "Abrir Modal"
+                ),
+
+                React.createElement(
+                    Modal,
+                    {
+                        open: open,
+                        onClose: () => setOpen(false)
+                    },
+
+                    React.createElement(
+                        Box,
+                        {
+                            sx: {
+                                position: "absolute",
+                                top: "50%",
+                                left: "50%",
+                                transform: "translate(-50%, -50%)",
+                                width: 400,
+                                bgcolor: "background.paper",
+                                p: 4
+                            }
+                        },
+
+                        React.createElement(
+                            Typography,
+                            { variant: "h6" },
+                            "Meu Modal"
+                        ),
+
+                        React.createElement(
+                            Typography,
+                            { sx: { mt: 2 } },
+                            "Este modal foi desenvolvido utilizando MUI."
+                        )
+                    )
+                )
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById("root")).render(
+            React.createElement(App)
+        );
+    </script>
+
+</body>
+</html>
