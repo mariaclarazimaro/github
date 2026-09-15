@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar MUI</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@mui/material@5.15.20/umd/material-ui.development.js"></script>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script>
+        const {
+            AppBar,
+            Toolbar,
+            Typography,
+            Button,
+            Box
+        } = MaterialUI;
+
+        function App() {
+            return React.createElement(
+                "div",
+                null,
+
+                React.createElement(
+                    AppBar,
+                    { position: "fixed" },
+
+                    React.createElement(
+                        Toolbar,
+                        null,
+
+                        React.createElement(
+                            Typography,
+                            {
+                                variant: "h6",
+                                sx: { flexGrow: 1 }
+                            },
+                            "Meu Site"
+                        ),
+
+                        React.createElement(
+                            Button,
+                            { color: "inherit" },
+                            "Início"
+                        ),
+
+                        React.createElement(
+                            Button,
+                            { color: "inherit" },
+                            "Sobre"
+                        ),
+
+                        React.createElement(
+                            Button,
+                            { color: "inherit" },
+                            "Contato"
+                        )
+                    )
+                ),
+
+                React.createElement(
+                    Box,
+                    { sx: { padding: "100px 30px" } },
+
+                    React.createElement(
+                        Typography,
+                        { variant: "h4" },
+                        "Página Inicial"
+                    ),
+
+                    React.createElement(
+                        Typography,
+                        { sx: { marginTop: "20px" } },
+                        "Esta página possui uma barra de navegação fixa."
+                    )
+                )
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById("root")).render(
+            React.createElement(App)
+        );
+    </script>
+
+</body>
+</html>
