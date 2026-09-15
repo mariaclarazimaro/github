@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2 - Animação</title>
+
+    <style>
+        .botao {
+            padding: 15px 30px;
+            background-color: purple;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            animation: aumentar 1s infinite alternate;
+        }
+
+        @keyframes aumentar {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Botão Animado</h1>
+
+    <button class="botao">
+        Clique aqui
+    </button>
+
+</body>
+</html>
