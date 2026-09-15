@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 4 - Clip Path</title>
+
+    <style>
+        .botao {
+            padding: 20px 40px;
+            background-color: pink;
+            color: black;
+            border: none;
+            cursor: pointer;
+
+            clip-path: polygon(
+                10% 0%,
+                90% 0%,
+                100% 50%,
+                90% 100%,
+                10% 100%,
+                0% 50%
+            );
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Botão com Clip-Path</h1>
+
+    <button class="botao">
+        Clique aqui
+    </button>
+
+</body>
+</html>
