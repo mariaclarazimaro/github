@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 5 - Formulário</title>
+
+    <style>
+        input,
+        textarea {
+            display: block;
+            width: 300px;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid gray;
+            border-radius: 5px;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: purple;
+            font-style: italic;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: purple;
+            outline: none;
+            box-shadow: 0 0 5px purple;
+        }
+
+        button {
+            padding: 10px 25px;
+            background-color: purple;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Formulário</h1>
+
+    <form>
+
+        <input type="text" placeholder="Digite seu nome">
+
+        <input type="email" placeholder="Digite seu e-mail">
+
+        <textarea placeholder="Digite sua mensagem"></textarea>
+
+        <button type="submit">
+            Enviar
+        </button>
+
+    </form>
+
+</body>
+</html>
