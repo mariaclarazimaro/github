@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Galeria de Imagens</title>
+<style>
+  body { font-family: sans-serif; text-align: center; }
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    padding: 30px;
+  }
+  .galeria img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  .galeria img:hover { transform: scale(1.05); }
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox.ativo { display: flex; }
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+  <h1>Galeria</h1>
+  <div class="galeria">
+    <img src="img-01.img" alt="Imagem 1">
+    <img src="img-02.img" alt="Imagem 2">
+    <img src="img-03.img" alt="Imagem 3">
+    <img src="img-04,img.avif" alt="Imagem 4">
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <img id="imagemAmpliada" src="" alt="Imagem ampliada">
+  </div>
+
+  <script>
+    const galeria = document.querySelector('.galeria');
+    const lightbox = document.getElementById('lightbox');
+    const imagemAmpliada = document.getElementById('imagemAmpliada');
+
+    galeria.addEventListener('click', (e) => {
+      if (e.target.tagName === 'IMG') {
+        imagemAmpliada.src = e.target.src;
+        lightbox.classList.add('ativo');
+      }
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('ativo');
+    });
+  </script>
+</body>
+</html>

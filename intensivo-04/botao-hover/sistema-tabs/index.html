@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Tabs</title>
+<style>
+  body { font-family: sans-serif; max-width: 500px; margin: 60px auto; }
+  .tabs { display: flex; border-bottom: 2px solid #ddd; }
+  .tab-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: #f3f4f6;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .tab-btn.ativo { background: #3b82f6; color: white; }
+  .tab-conteudo { display: none; padding: 20px; }
+  .tab-conteudo.ativo { display: block; }
+</style>
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab-btn ativo" data-tab="perfil">Perfil</button>
+    <button class="tab-btn" data-tab="projetos">Projetos</button>
+    <button class="tab-btn" data-tab="contato">Contato</button>
+  </div>
+
+  <div class="tab-conteudo ativo" id="perfil">
+    <h3>Perfil</h3>
+    <p>Desenvolvedor Júnior focado em JavaScript e interfaces interativas.</p>
+  </div>
+  <div class="tab-conteudo" id="projetos">
+    <h3>Projetos</h3>
+    <p>Portfólio de exercícios organizados por tema no GitHub.</p>
+  </div>
+  <div class="tab-conteudo" id="contato">
+    <h3>Contato</h3>
+    <p>email@exemplo.com</p>
+  </div>
+
+  <script>
+    const botoes = document.querySelectorAll('.tab-btn');
+    const conteudos = document.querySelectorAll('.tab-conteudo');
+
+    botoes.forEach(botao => {
+      botao.addEventListener('click', () => {
+        botoes.forEach(b => b.classList.remove('ativo'));
+        conteudos.forEach(c => c.classList.remove('ativo'));
+
+        botao.classList.add('ativo');
+        document.getElementById(botao.dataset.tab).classList.add('ativo');
+      });
+    });
+  </script>
+</body>
+</html>
